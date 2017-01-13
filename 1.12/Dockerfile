@@ -10,5 +10,6 @@ RUN apt-key adv \
 RUN echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list
 
 RUN apt-get update
+RUN apt-get install -y --no-install-recommends docker-engine
 
 ENTRYPOINT ["/bin/bash"]
